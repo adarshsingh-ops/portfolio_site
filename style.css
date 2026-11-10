@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 /* ============================================================
    1. THEME TOKENS
@@ -1075,4 +1074,69 @@ button:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 3px;
   border-radius: 6px;
+}
+
+/* ============================================================
+   12. UPGRADES — hero CTAs, skills, projects, GitHub, blog, a11y
+   ============================================================ */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 10px 14px; border-radius: 10px; background: var(--cyan); color: #021018; font-weight: 700; }
+.skip:focus { top: 10px; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+.progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 60; transform: scaleX(0); transform-origin: 0 50%; background: linear-gradient(90deg, var(--blue), var(--cyan), var(--green)); }
+.section { padding: clamp(56px, 8vw, 96px) 0; }
+.lead { color: var(--muted); font-size: 14px; line-height: 1.7; max-width: 62ch; margin: 10px 0 0; }
+.lead a, .links a { color: var(--cyan); }
+body.light .lead a, body.light .links a { color: #0a6fa8; }
+code { font-family: "DM Mono", monospace; font-size: .9em; padding: 1px 6px; border-radius: 6px; background: var(--glass-strong); }
+
+.card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius); box-shadow: var(--shadow); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); padding: 22px; }
+.card h3 { font-size: 16px; margin-bottom: 6px; }
+.card p { color: var(--muted); font-size: 13.5px; line-height: 1.7; }
+
+/* hero */
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 14px; }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: var(--radius-pill); border: 1px solid var(--glass-edge); background: var(--glass); color: var(--text); font-weight: 700; font-size: 14px; transition: transform .2s, border-color .2s; }
+.btn:hover { transform: translateY(-2px); border-color: var(--cyan); }
+.btn.primary { border: 0; background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #021018; }
+.status { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+.status span { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(40, 231, 176, .18); }
+
+/* skills: dashed outline = still learning */
+.skill-groups, .build-grid, .repo-grid { display: grid; gap: 18px; margin-top: 28px; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.stage { margin-top: 16px; }
+.stage h4 { font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 0; }
+.chips li { padding: 5px 12px; border-radius: var(--radius-pill); font-size: 12.5px; border: 1px solid var(--glass-border); background: var(--glass-soft); }
+.s1 .chips li { border-color: rgba(40, 231, 176, .55); }
+.s2 .chips li { border-color: rgba(25, 217, 255, .5); }
+.s3 .chips li { border-style: dashed; border-color: var(--purple); }
+.badge { display: inline-block; margin-bottom: 10px; padding: 3px 10px; border-radius: var(--radius-pill); font-size: 11.5px; font-weight: 700; background: var(--glass-strong); border: 1px solid var(--glass-edge); }
+
+/* projects */
+.project-grid { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.project-card { min-height: 0; gap: 10px; }
+.shot { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-sm); overflow: hidden; display: grid; place-items: center; border: 1px dashed var(--glass-edge); background: linear-gradient(135deg, rgba(22, 141, 255, .16), rgba(141, 105, 255, .16)); color: var(--faint); font-size: 12px; }
+.shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.links { display: flex; gap: 16px; font-size: 13px; font-weight: 700; }
+.case { border-top: 1px solid var(--line); padding-top: 10px; font-size: 13px; }
+.case summary, .post summary { cursor: pointer; font-weight: 700; }
+.case dt { margin-top: 10px; font-weight: 700; }
+.case dd { margin: 2px 0 0; color: var(--muted); line-height: 1.65; }
+
+/* github + blog */
+.repo { display: flex; flex-direction: column; gap: 8px; }
+.repo h3 a:hover { color: var(--cyan); }
+.repo .meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--faint); }
+.posts { display: grid; gap: 14px; margin-top: 28px; max-width: 760px; }
+.post summary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; font-size: 16px; }
+.post summary small { color: var(--faint); font-weight: 500; font-size: 12px; }
+.post p { margin-top: 12px; max-width: 68ch; }
+
+/* scroll reveal (only active when JS has run) */
+.js [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; transition-delay: var(--d, 0s); }
+.js [data-reveal].in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
 }

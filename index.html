@@ -4,11 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adarsh Kumar | Aspiring SDE</title>
-<meta name="description" content="Adarsh Kumar — BCA student & aspiring SDE. C++ & DSA, Web Development, Cybersecurity, DevOps.">
+<meta name="description" content="Adarsh Kumar — BCA student and aspiring SDE. Projects, technical notes and GitHub activity across C++, DSA, web development, cybersecurity and DevOps.">
+<meta name="theme-color" content="#020a14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adarsh Kumar | Aspiring SDE">
+<meta property="og:description" content="BCA student building web apps and learning C++, DSA, cybersecurity and DevOps.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adarsh Kumar","jobTitle":"BCA student and aspiring software engineer","sameAs":["https://github.com/adarshsingh-ops","https://www.linkedin.com/in/adarsh-kumar-2aaa9a30b","https://www.instagram.com/ryuken_fx/"]}</script>
+<link rel="icon" type="image/x-icon" href="assets1/AdarshFinal.png">
 </head>
 <body>
+<script>try{if(localStorage.getItem('theme')==='light')document.body.classList.add('light')}catch(e){}</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
 <!-- Ambient background orbs -->
 <div class="orb-field" aria-hidden="true">
@@ -25,19 +38,19 @@
     <span>Adarsh <b>Kumar</b></span>
   </a>
 
-  <nav class="nav-links">
+  <nav class="nav-links" aria-label="Primary">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#journey">Journey</a>
     <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <button class="theme-button" type="button" aria-label="Toggle light and dark theme">☼</button>
+  <button class="theme-button" type="button" aria-label="Light theme" aria-pressed="false">☼</button>
 </header>
 
-<main>
+<main id="main">
 
   <!-- HERO -->
   <section class="hero" id="home">
@@ -47,7 +60,7 @@
     <div class="hero-inner">
       <div class="hero-photo-wrap">
         <div class="photo-ring">
-          <img src="./assets1/AdarshFinal.png" alt="Adarsh Kumar">
+          <img src="./assets1/AdarshFinal.png" alt="Portrait of Adarsh Kumar" fetchpriority="high" decoding="async">
         </div>
 
         <div class="mini-terminal">
@@ -77,11 +90,17 @@
           <span>DevOps</span>
         </div>
 
+        <div class="btn-row">
+          <a class="btn primary" href="assets1/Adarsh_Singh_Resume.pdf" download>Download resume</a>
+          <a class="btn" href="#projects">Explore projects</a>
+        </div>
+        <p class="status"><span aria-hidden="true"></span>Open to opportunities and collaborations</p>
+
         <div class="social-row">
           <a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener" aria-label="GitHub"><img width="30" src="assets1/github.png" alt=""></a>
           <a href="https://www.linkedin.com/in/adarsh-kumar-2aaa9a30b" target="_blank" rel="noopener" aria-label="LinkedIn"><img width="25" src="assets1/linkedin.png" alt=""></a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adarshsingh9674@gmail.com" aria-label="Email"><img width="25" src="assets1/gmail.png" alt=""></a>
-          <a href="https://www.instagram.com/ryuken_fx/" aria-label="instagram"><img width="25" src="assets1/instagram.png" alt=""></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adarshsingh9674@gmail.com" target="_blank" rel="noopener" aria-label="Email"><img width="25" src="assets1/gmail.png" alt=""></a>
+          <a href="https://www.instagram.com/ryuken_fx/" target="_blank" rel="noopener" aria-label="Instagram"><img width="25" src="assets1/instagram.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -149,64 +168,32 @@
   <section class="section skills" id="skills">
     <div class="section-label">SKILLS</div>
     <h2>My Toolbox</h2>
-
-    <div class="skills-grid">
-
-      <article class="skill-card">
-        <div class="skill-icon blue">&lt;/&gt;</div>
-        <h3>Languages</h3>
-        <ul>
-          <li>C &amp; C++</li>
-          <li>Python</li>
-          <li>JavaScript (Advanced)</li>
-          <li>HTML &amp; CSS, tailwindCss</li>
-        </ul>
+    <p class="lead">Grouped by what I use and how well I know it. Dashed outlines mark what I'm still learning.</p>
+    <div class="skill-groups">
+      <article class="card">
+        <h3>Technologies</h3>
+        <div class="stage s1"><h4>Comfortable</h4><ul class="chips"><li>JavaScript</li><li>HTML &amp; CSS</li><li>Tailwind CSS</li><li>C</li> <li>C++</li> <li>Git &amp; GitHub</li></ul></div>
+        <div class="stage s2"><h4>Practising</h4><ul class="chips"><li>C++(DSA)</li><li>OOPs</li><li>Python</li><li>React.js</li><li>Express.js</li><li>Node.js</li><li>Linux</li><li>Databases</li></ul></div>
+        <div class="stage s3"><h4>Learning</h4><ul class="chips"><li>Docker</li><li>CI/CD</li><li>cybersecurity</li></ul></div>
       </article>
-
-      <article class="skill-card">
-        <div class="skill-icon cyan">⌘</div>
-        <h3>DSA</h3>
-        <ul>
-          <li>Arrays &amp; Strings</li>
-          <li>Linked Lists</li>
-          <li>Trees &amp; Graphs</li>
-          <li>Algorithms</li>
-        </ul>
+      <article class="card">
+        <h3>Concepts</h3>
+        <div class="stage s1"><h4>Comfortable</h4><ul class="chips"><li>Arrays &amp; strings</li><li>Frontend &amp; backend basics</li></ul></div>
+        <div class="stage s2"><h4>Practising</h4><ul class="chips"><li>Linked lists</li><li>Trees &amp; graphs</li><li>Algorithms</li></ul></div>
+        <div class="stage s3"><h4>Learning</h4><ul class="chips"><li>Networking</li><li>Ethical hacking</li><li>Web security</li><li>System security</li></ul></div>
       </article>
+    </div>
+  </section>
 
-      <article class="skill-card">
-        <div class="skill-icon cyan">◎</div>
-        <h3>Web Development</h3>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3, TailwindCss, React</li>
-          <li>Databases</li>
-          <li>Frontend & Backend</li>
-        </ul>
-      </article>
-
-      <article class="skill-card">
-        <div class="skill-icon purple">♢</div>
-        <h3>Cybersecurity</h3>
-        <ul>
-          <li>Advanced Networking (learning)</li>
-          <li>Ethical Hacking (learning)</li>
-          <li>Web Security (learning)</li>
-          <li>System Security (learning)</li>
-        </ul>
-      </article>
-
-      <article class="skill-card">
-        <div class="skill-icon cyan">☁</div>
-        <h3>DevOps</h3>
-        <ul>
-          <li>Linux</li>
-          <li>Git &amp; GitHub</li>
-          <li>Docker (Learning)</li>
-          <li>CI/CD (Learning)</li>
-        </ul>
-      </article>
-
+  <!-- CURRENTLY BUILDING -->
+  <section class="section building" id="building">
+    <div class="section-label">NOW</div>
+    <h2>Currently Building</h2>
+    <div class="build-grid">
+      <article class="card"><span class="badge">In progress</span><h3>Full-stack web app</h3><p>A small app with real-world functionality, moving from plain HTML, CSS and JS towards React and a database.</p></article>
+      <article class="card"><span class="badge">In progress</span><h3>C++ &amp; DSA practice</h3><p>Working through arrays, linked lists, trees and graphs, and writing up what I learn as notes below.</p></article>
+      <article class="card"><span class="badge">Planned</span><h3>Cybersecurity lab</h3><p>Linux and networking exercises that grow into ethical hacking and web security practice.</p></article>
+      <article class="card"><span class="badge">Goal</span><h3>Docker &amp; CI/CD</h3><p>Containerise my projects and automate their tests and deploys, as a step towards DevSecOps.</p></article>
     </div>
   </section>
 
@@ -251,44 +238,69 @@
   <section class="section projects" id="projects">
     <div class="section-label">PROJECTS</div>
     <h2>Things I'm Building</h2>
-
     <div class="project-grid">
-
       <article class="project-card">
-        <div class="project-icon">◎</div>
+        <div class="shot"><img src="assets1/portfolioSS.png" alt="Screenshot of this portfolio website" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()"></div>
         <h3>Personal Portfolio</h3>
-        <p>This website. Built with HTML &amp; CSS. A personal space to showcase my journey and skills.</p>
-        <div class="project-bottom">
-          <div class="tags"><span>HTML</span><span>CSS</span></div>
-          <a href="#home" aria-label="Portfolio project">→</a>
-        </div>
+        <p>This website: a themeable, responsive page that shows my journey, skills and live GitHub activity.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="links"><a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener">GitHub</a></div>
+        <details class="case"><summary>Case study</summary><dl><dt>Problem</dt><dd>I needed one place that shows what I can build, not just what I list on a resume.</dd><dt>Approach</dt><dd>Hand-written HTML and CSS with a little vanilla JavaScript for the theme, scroll effects and GitHub data. No framework, so it loads fast.</dd><dt>Result</dt><dd>A site that works without JavaScript, remembers the visitor's theme and pulls my latest repositories automatically.</dd></dl></details>
       </article>
-
       <article class="project-card">
-        <div class="project-icon purple-text">&lt;/&gt;</div>
-        <h3>Web App <small>(Coming Soon)</small></h3>
-        <p>A simple full stack web application with real-world functionality.</p>
-        <div class="project-bottom">
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-          <a href="#contact" aria-label="Web app project">→</a>
-        </div>
+        <div class="shot"><img src="assets1/Madhusmiti Honey Brand Styleboard.png" alt="Screenshot of the web app" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <h3>Honey E-commerce platform<small>(Coming soon...)</small></h3>
+        <p>A full-stack web application which is being built to change the honey market forever.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <div class="links"><a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener">GitHub</a></div>
+        <details class="case"><summary>Case study</summary><dl><dt>Problem</dt><dd>the current honey market is only selling the adulterated ones so the idea is to bring a brand in market whose only aim is to sell pure raw honey in affordable prices.</dd><dt>Plan</dt><dd>Start with a working frontend, then add a backend and database.</dd><dt>Status</dt><dd>Not started. This card will gain a write-up once there is something to show.</dd></dl></details>
       </article>
-
       <article class="project-card">
-        <div class="project-icon cyan-text">♢</div>
-        <h3>Cybersecurity Lab <small>(Coming Soon)</small></h3>
-        <p>Exploring security tools, practical labs and real-world scenarios.</p>
-        <div class="project-bottom">
-          <div class="tags"><span>Linux</span><span>Networking</span><span>Security</span></div>
-          <a href="#contact" aria-label="Cybersecurity project">→</a>
-        </div>
+        <div class="shot"><img src="assets1/primemotorsSS.png" alt="Screenshot of the primemotorsSS" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <h3>Prime Motors Website <small>(deployed)</small></h3>
+        <p>A simple yet useful website for a business that provides car related services.</p>
+        <div class="tags"><span>HTML</span><span>TailwindCSS</span><span>JS</span></div>
+        <div class="links"><a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener">GitHub</a></div>
+        <details class="case"><summary>Case study</summary><dl><dt>Goal</dt><dd>this business wanted a website so that they can share their information to anyone they want easily. and they also wanted a feature in which a customer can create a jobcard by themselves and an automated message will automatically be sent to the business's Whatsapp number.</dd><dt>Plan</dt><dd>to implement the feature the business wanted and prepare the website according to their needs.</dd><dt>Status</dt><dd>Deployed</dd></dl></details>
       </article>
-
-      <article class="project-card more-projects">
-        <div class="plus">+</div>
-        <p>More projects<br>coming soon...</p>
+      
+      
+      
+      <article class="project-card">
+        <div class="shot"><img src="assets1/cyberlab.jpg" alt="Screenshot of the cybersecurity lab" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <h3>Cybersecurity Lab <small>(Coming soon)</small></h3>
+        <p>Security tools, practical labs and real-world scenarios.</p>
+        <div class="tags"><span>Linux</span><span>Networking</span><span>Security</span></div>
+        <div class="links"><a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener">GitHub</a></div>
+        <details class="case"><summary>Case study</summary><dl><dt>Goal</dt><dd>Learn how systems are attacked in order to defend them.</dd><dt>Plan</dt><dd>Set up an isolated Linux lab and document each exercise.</dd><dt>Status</dt><dd>Planned.</dd></dl></details>
       </article>
+    </div>
+  </section>
 
+  <!-- GITHUB -->
+  <section class="section github" id="github">
+    <div class="section-label">GITHUB</div>
+    <h2>Recent Activity</h2>
+    <div id="gh-repos" class="repo-grid" aria-live="polite"><p class="lead">Loading repositories…</p></div>
+    <p class="lead"><a href="https://github.com/adarshsingh-ops" target="_blank" rel="noopener">See everything on GitHub</a></p>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section blog" id="blog">
+    <div class="section-label">BLOG</div>
+    <h2>Technical Notes</h2>
+    <p class="lead">Short explanations of things I've just learned.</p>
+    <div class="posts">
+      <details class="post card">
+        <summary><span>Why sizeof(arr) breaks inside a C function</span><small>C · 3 min read</small></summary>
+        <p>In most expressions an array name "decays" into a pointer to its first element. The exceptions are <code>sizeof</code> and <code>&amp;</code>. So in <code>main</code>, <code>sizeof(arr)</code> returns the whole array's size in bytes.</p>
+        <p>A function parameter written as <code>int arr[]</code> is really <code>int *arr</code>. Inside the function, <code>sizeof(arr)</code> is the size of a pointer, typically 8 bytes on a 64-bit system. Pass the length as a separate argument instead.</p>
+      </details>
+      <details class="post card">
+        <summary><span>IntersectionObserver instead of scroll listeners</span><small>JavaScript · 2 min read</small></summary>
+        <p>A scroll listener runs on every scroll event, and reading layout inside it forces the browser to recalculate positions. <code>IntersectionObserver</code> tells you when an element enters or leaves the viewport, and the browser batches that work for you.</p>
+        <p>I use it on this site to highlight the current nav link and to reveal sections as they appear. Call <code>unobserve</code> once an element has revealed so it stops costing anything.</p>
+      </details>
     </div>
   </section>
 
@@ -339,45 +351,13 @@
   <!-- FOOTER -->
   <footer>
     <span>© 2026 Adarsh Kumar</span>
-    <span>Built with HTML &amp; CSS &nbsp;|&nbsp; Keep Learning &nbsp;Keep Growing ♥</span>
+    <span>Built with HTML, CSS &amp; vanilla JS &nbsp;|&nbsp; Keep Learning &nbsp;Keep Growing ♥</span>
     <a href="#home" aria-label="Back to top">↑</a>
   </footer>
 
 </main>
 
-<script>
-  /* ---------- Theme toggle ---------- */
-  const themeBtn = document.querySelector('.theme-button');
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-  function setTheme(light) {
-    document.body.classList.toggle('light', light);
-    themeBtn.textContent = light ? '☾' : '☼';
-  }
-  setTheme(prefersLight);
-
-  themeBtn.addEventListener('click', () => {
-    setTheme(!document.body.classList.contains('light'));
-  });
-
-  /* ---------- Active nav link on scroll ---------- */
-  const links = [...document.querySelectorAll('.nav-links a')];
-  const sections = links
-    .map(l => document.querySelector(l.getAttribute('href')))
-    .filter(Boolean);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      links.forEach(l => l.classList.toggle(
-        'active',
-        l.getAttribute('href') === '#' + entry.target.id
-      ));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-
-  sections.forEach(s => observer.observe(s));
-</script>
+<script src="script.js" defer></script>
 
 </body>
 </html>
